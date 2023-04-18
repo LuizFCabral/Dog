@@ -4,16 +4,18 @@
     </div>
     <div class="row">
     <div class="col">
-      <img class="shadow rounded" src="https://images.dog.ceo/breeds/waterdog-spanish/20181023_072736.jpg" alt="Imagem de Cachorro" width = "200px">
+      <img class="shadow rounded" [src]="dog.message" alt="Dog Image" width = "200px">
     </div>
     <div class="row mt-3">
       <div class="col">
-        Waterdog Spanish
+        <span *ngFor="let name of getName()">
+          {{name | titlecase}}
+        </span>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <button type="button" class="btn btn-primary m-3">New Dog</button>
+        <button type="button" class="btn btn-primary m-3" (click) = "newDog()">New Dog</button>
       </div>
   </div>
 </div>
